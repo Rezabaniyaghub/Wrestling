@@ -82,7 +82,7 @@ namespace DataAccess
                 if (old != null)
                 {
                     old.Id = model.Id;
-                    old.FirsName = model.FirsName;
+                    old.FirstName = model.FirstName;
                     old.LastName = model.LastName;
                     old.Tuition = model.Tuition;
                     old.NationalCode = model.NationalCode;

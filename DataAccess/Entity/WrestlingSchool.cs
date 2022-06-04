@@ -18,7 +18,7 @@ namespace DataAccess.Entity
 
         [Required]
         [MaxLength(50)]
-        public string FirsName { get; set; }
+        public string FirstName { get; set; }
 
         [Required]
         [MaxLength(50)]

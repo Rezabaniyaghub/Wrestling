@@ -16,6 +16,7 @@ namespace WrestlingSchool
 
                 config.CreateMap<DataAccess.Entity.WrestlingSchool, WrestlingModel>()
                 .ForMember(f => f.CreateDate, mf => mf.MapFrom(d => d.CreatedAt.ToString("yyyy/MMM/dd")));
+                
             });
             return mappingConfig;
         }
