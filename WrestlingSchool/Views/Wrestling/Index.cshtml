@@ -1,0 +1,50 @@
+﻿@model List<Models.WrestlingModel>
+<div class="row">
+    <div class=" col-md-12">
+        <a asp-action="Create" class="btn btn-warning btn-sm mb-2" >
+            <i class="fas fa-plus"></i>
+            افزودن کاربر جدید
+        </a>
+     @*   <h2 style="color:crimson" class="btn btn-lg mt-2">اکادمی کشتی البرز</h2>*@
+        <br />
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th style="color:royalblue">شناسه</th>
+                    <th style="color:royalblue">نام کوچک</th>
+                    <th style="color:royalblue">نام خانوادگی</th>
+                    <th style="color:royalblue">شماره تلفن</th>
+                    <th style="color:royalblue">شهریه</th>
+                    <th style="color:royalblue">تاریخ تولد</th>
+                    <th style="color:royalblue">کد ملی</th>
+                    <th style="color:royalblue">تاریخ ثبت نام</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var iteam in Model)
+                {
+                    <tr>
+                        <td>@iteam.Id</td>
+                        <td>@iteam.FirstName</td>
+                        <td>@iteam.LastName</td>
+                        <td>@iteam.PhoneNumber</td>
+                        <td>@iteam.Tuition</td>
+                        <td>@iteam.DateOfBirth</td>
+                        <td>@iteam.NationalCode</td>
+                        <td>@iteam.CreateDate</td>
+
+                        <td>
+                            <a href="\wrestling\edit?id=@iteam.Id" class="btn btn-danger">
+                                <i class="fa fa-edit" style="font-size:20px;color:cornflowerblue"></i>
+                                ویرایش </a>
+
+                                 <a asp-controller="Wrestling" asp-action="Delete" asp-route-id="@iteam.Id" class="btn btn-primary">
+                                <i class="fa fa-trash" style="font-size:20px;color:yellowgreen"></i>
+                                حذف </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
