@@ -13,6 +13,7 @@ namespace WrestlingSchool.Controllers
         public WrestlingController(IWrestlingService wrestlingService,IMapper mapper)
         {
             _wrestlingService = wrestlingService;
+
             _mapper = mapper;
         } 
         #endregion
